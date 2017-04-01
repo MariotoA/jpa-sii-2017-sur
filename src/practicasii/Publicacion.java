@@ -7,21 +7,17 @@ package practicasii;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 /**
  *
- * @author hack
+ *  @author Andriy Dachuck, Mario Alejandro Rueda Castro
  */
 @Entity
 public class Publicacion implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     @Column(nullable=false)
     private String titulo;

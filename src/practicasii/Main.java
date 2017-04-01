@@ -9,7 +9,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 /**
  *
- * @author hack
+ *  @author Andriy Dachuck, Mario Alejandro Rueda Castro
  */
 public class Main {
 

@@ -8,10 +8,6 @@ package practicasii;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 /**
  *
@@ -22,7 +18,7 @@ public class Evento implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     @Column(nullable=false)
     private String descripcion;
@@ -32,10 +28,13 @@ public class Evento implements Serializable {
     private int prioridad;
     
     @ManyToOne
+    @Column(nullable = false)
     private Usuario creador;
     @ManyToOne
+    @Column(nullable = false)
     private Usuario validador;
     @ManyToOne
+    @Column(nullable = false)
     private Sitio localizacion;
     
     /*Relaciones con Publicaciones*/

@@ -8,14 +8,10 @@ package practicasii;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 /**
  *
- * @author hack
+ *  @author Andriy Dachuck, Mario Alejandro Rueda Castro
  */
 @Entity
 public class Sitio implements Serializable {
@@ -41,15 +37,18 @@ public class Sitio implements Serializable {
     @Column(nullable =false)
     private String calle;
     
-    
+    /**
+     * Sitio -> Usuario
+     */
     @ManyToOne
+    @Column(nullable = false)
     private Usuario creador;
     @ManyToOne
+    @Column(nullable = false)
     private Usuario validador;
     
     @OneToMany(mappedBy="localizacion")
     private List<Evento> eventosCelebrados;
-    
     @OneToMany(mappedBy="sitioReferido")
     private List<Publicacion> publicaciones;
 

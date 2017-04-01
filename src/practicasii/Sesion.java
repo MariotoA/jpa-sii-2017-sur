@@ -9,36 +9,30 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.*;
 
 /**
  *
- * @author hack
+ *  @author Andriy Dachuck, Mario Alejandro Rueda Castro
  */
 @Entity
 public class Sesion implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     private float precio;
-    
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaInicio;
-    
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaFin;
-    
     private String urlCompraEntrada;
     
  
     /*Relaciones con Evento*/
     @ManyToOne
+    @Column(nullable = false)
     private Evento eventoCelebrado;
      /*Relaciones con Interes*/
     @OneToMany(mappedBy="sesionReferida")
