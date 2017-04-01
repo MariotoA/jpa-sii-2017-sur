@@ -49,7 +49,7 @@ public class Usuario implements Serializable {
      /*Relaciones con publicacion*/
     @OneToMany(mappedBy="creador")
     private List<Publicacion> publicacionesCreadas;
-    
+    //
      /*Relaciones con Interes*/
     @OneToMany(mappedBy="interesado")
     private List<Interes> interesesReflejados;

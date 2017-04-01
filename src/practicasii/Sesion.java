@@ -32,7 +32,7 @@ public class Sesion implements Serializable {
  
     /*Relaciones con Evento*/
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Evento eventoCelebrado;
      /*Relaciones con Interes*/
     @OneToMany(mappedBy="sesionReferida")

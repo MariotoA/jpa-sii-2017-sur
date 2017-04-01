@@ -27,12 +27,12 @@ public class Interes implements Serializable {
     
     /*interes--usuario*/
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Usuario interesado;
     
     /*interes--Sesion*/
     @ManyToOne  
-    @Column(nullable = false) 
+    @JoinColumn(nullable = false) 
     private Sesion sesionReferida;
 
     

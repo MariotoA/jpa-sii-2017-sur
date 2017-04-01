@@ -41,10 +41,10 @@ public class Sitio implements Serializable {
      * Sitio -> Usuario
      */
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Usuario creador;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Usuario validador;
     
     @OneToMany(mappedBy="localizacion")

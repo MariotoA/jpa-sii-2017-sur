@@ -27,15 +27,18 @@ public class Publicacion implements Serializable {
     
     
     /*Publicacion--Usuario*/
-    @ManyToOne
+    @ManyToOne  
+    @JoinColumn(nullable = false) 
     private Usuario creador;
     
      /*Publicacion--Sitio*/
-    @ManyToOne
+    @ManyToOne  
+    @JoinColumn(nullable = false) 
     private Sitio sitioReferido;
     
      /*Publicacion--Evento*/
-    @ManyToOne
+    @ManyToOne  
+    @JoinColumn(nullable = false) 
     private Evento eventoReferido;
 
     

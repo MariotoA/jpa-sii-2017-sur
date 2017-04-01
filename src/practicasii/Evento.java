@@ -28,13 +28,13 @@ public class Evento implements Serializable {
     private int prioridad;
     
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Usuario creador;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Usuario validador;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Sitio localizacion;
     
     /*Relaciones con Publicaciones*/
