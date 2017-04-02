@@ -35,7 +35,7 @@ public class Sitio implements Serializable {
     @Column(nullable =false)
     private String pais;
     @Column(nullable =false)
-    private String calle;
+    private String direccion;
     
     /**
      * Sitio -> Usuario
@@ -118,12 +118,12 @@ public class Sitio implements Serializable {
         this.pais = pais;
     }
 
-    public String getCalle() {
-        return calle;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setCalle(String calle) {
-        this.calle = calle;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public Usuario getCreador() {

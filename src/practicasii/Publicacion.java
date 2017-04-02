@@ -21,7 +21,7 @@ public class Publicacion implements Serializable {
     private Long id;
     @Column(nullable=false)
     private String titulo;
-    private String imagen;
+    private String multimedia;
     private String texto;
     private int valoracion;
     
@@ -81,13 +81,15 @@ public class Publicacion implements Serializable {
         this.titulo = titulo;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getMultimedia() {
+        return multimedia;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setMultimedia(String multimedia) {
+        this.multimedia = multimedia;
     }
+
+
 
     public String getTexto() {
         return texto;
